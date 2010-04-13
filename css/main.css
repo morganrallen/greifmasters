@@ -1,0 +1,49 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	color: #fff;
+	background-color: #333;
+}
+
+a, a:link {
+	color: #fff;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #ccc;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+#pageframe {
+	padding: 10px;
+}
+
+#nav {
+	border: 1px solid #ccc;
+	float: left;
+	margin-right: 10px; /* push #content right */
+	padding: 4px;
+}
+
+.navBox {
+	padding: 10 0px;
+}
+
+.navHeading {	
+	border: 1px solid #ccc;
+	background-color: #666;
+	font-weight: bold;
+}
+
+#content {
+}
+
+#footer {
+	clear: both;
+}
