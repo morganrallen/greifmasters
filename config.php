@@ -1,4 +1,5 @@
 <?
-$config["db"]["host"] = "localhost";
-$config["db"]["username"] = "root";
-$config["db"]["password"] = "";
+$config["db"]["host"] = "mra.xen.prgmr.com";
+$config["db"]["username"] = "greifmaster";
+$config["db"]["password"] = "greifgreifbaby";
+?>

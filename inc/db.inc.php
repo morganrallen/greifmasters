@@ -1,6 +1,5 @@
 <?php
 
 mysql_connect($config["db"]["host"], $config["db"]["username"], $config["db"]["password"]);
-mysql_select_db('greifmasters');
-
+mysql_select_db('greifmasters') or die(mysql_error());
 ?>

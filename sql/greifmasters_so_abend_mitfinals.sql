@@ -1,4 +1,4 @@
-DROP TABLE `brackets`;
+DROP TABLE IF EXISTS `brackets`;
 CREATE TABLE `brackets` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `tournament_id` int(5) unsigned DEFAULT NULL,
@@ -40,7 +40,7 @@ UNLOCK TABLES;
 # Table structure for table 'bracket_qualifications'
 #
 
-DROP TABLE `bracket_qualifications`;
+DROP TABLE IF EXISTS `bracket_qualifications`;
 CREATE TABLE `bracket_qualifications` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `bracket_id` int(5) unsigned DEFAULT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `bracket_qualifications` (
 # Table structure for table 'bracket_types'
 #
 
-DROP TABLE `bracket_types`;
+DROP TABLE IF EXISTS `bracket_types`;
 CREATE TABLE `bracket_types` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -90,7 +90,7 @@ UNLOCK TABLES;
 # Table structure for table 'courts'
 #
 
-DROP TABLE `courts`;
+DROP TABLE IF EXISTS `courts`;
 CREATE TABLE `courts` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -119,7 +119,7 @@ UNLOCK TABLES;
 # Table structure for table 'court_occupation'
 #
 
-DROP TABLE `court_occupation`;
+DROP TABLE IF EXISTS `court_occupation`;
 CREATE TABLE `court_occupation` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `court_id` int(5) unsigned DEFAULT NULL,
@@ -144,7 +144,7 @@ CREATE TABLE `court_occupation` (
 # Table structure for table 'fouls'
 #
 
-DROP TABLE `fouls`;
+DROP TABLE IF EXISTS `fouls`;
 CREATE TABLE `fouls` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `player` int(10) unsigned DEFAULT NULL,
@@ -168,7 +168,7 @@ CREATE TABLE `fouls` (
 # Table structure for table 'goals'
 #
 
-DROP TABLE `goals`;
+DROP TABLE IF EXISTS `goals`;
 CREATE TABLE `goals` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `team_id` int(5) unsigned DEFAULT NULL,
@@ -832,7 +832,7 @@ UNLOCK TABLES;
 # Table structure for table 'matches'
 #
 
-DROP TABLE `matches`;
+DROP TABLE IF EXISTS `matches`;
 CREATE TABLE `matches` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `bracket_id` int(5) unsigned DEFAULT NULL,
@@ -1111,7 +1111,7 @@ UNLOCK TABLES;
 # Table structure for table 'players'
 #
 
-DROP TABLE `players`;
+DROP TABLE IF EXISTS `players`;
 CREATE TABLE `players` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -1260,7 +1260,7 @@ UNLOCK TABLES;
 # Table structure for table 'playing_times'
 #
 
-DROP TABLE `playing_times`;
+DROP TABLE IF EXISTS `playing_times`;
 CREATE TABLE `playing_times` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `tournament_id` int(5) unsigned DEFAULT NULL,
@@ -1291,7 +1291,7 @@ UNLOCK TABLES;
 # Table structure for table 'registration'
 #
 
-DROP TABLE `registration`;
+DROP TABLE IF EXISTS `registration`;
 CREATE TABLE `registration` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `team_id` int(5) unsigned DEFAULT NULL,
@@ -1359,7 +1359,7 @@ UNLOCK TABLES;
 # Table structure for table 'seeding'
 #
 
-DROP TABLE `seeding`;
+DROP TABLE IF EXISTS `seeding`;
 CREATE TABLE `seeding` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `team_id` int(5) unsigned DEFAULT NULL,
@@ -1425,7 +1425,7 @@ UNLOCK TABLES;
 # Table structure for table 'seeding_copy'
 #
 
-DROP TABLE `seeding_copy`;
+DROP TABLE IF EXISTS `seeding_copy`;
 CREATE TABLE `seeding_copy` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `team_id` int(5) unsigned DEFAULT NULL,
@@ -1491,7 +1491,7 @@ UNLOCK TABLES;
 # Table structure for table 'settings'
 #
 
-DROP TABLE `settings`;
+DROP TABLE IF EXISTS `settings`;
 CREATE TABLE `settings` (
   `id` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `db_host` varchar(70) DEFAULT NULL,
@@ -1522,7 +1522,7 @@ UNLOCK TABLES;
 # Table structure for table 'teams'
 #
 
-DROP TABLE `teams`;
+DROP TABLE IF EXISTS `teams`;
 CREATE TABLE `teams` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -1592,7 +1592,7 @@ UNLOCK TABLES;
 # Table structure for table 'tournaments'
 #
 
-DROP TABLE `tournaments`;
+DROP TABLE IF EXISTS `tournaments`;
 CREATE TABLE `tournaments` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -1625,7 +1625,7 @@ UNLOCK TABLES;
 # Table structure for table 'upc_matches'
 #
 
-DROP TABLE `upc_matches`;
+DROP TABLE IF EXISTS `upc_matches`;
 CREATE TABLE `upc_matches` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `match_order` int(3) unsigned DEFAULT NULL,
@@ -1758,7 +1758,7 @@ UNLOCK TABLES;
 # Table structure for table 'users'
 #
 
-DROP TABLE `users`;
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
   `player_id` int(5) unsigned DEFAULT NULL,

@@ -6,7 +6,7 @@ define ('BASE', '/greifmasters/admin');
 define ('PAGE_ROOT', '/greifmasters');
 
 $query = ("SELECT * FROM settings");
-$result = mysql_query($query);
+$result = mysql_query($query) or die(mysql_error());
 $settings = mysql_fetch_assoc($result);
 
 unset($query, $result);
