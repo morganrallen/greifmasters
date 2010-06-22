@@ -29,8 +29,8 @@
 						<div class="navBox">
 							<div class="navHeading">Tournaments</div>
 							<div class="margin_left">
-								<a href="/greifmasters/index.php?cat=list_tournaments&amp;p2=ong">ongoing</a><br />
-								<a href="/greifmasters/index.php?cat=list_tournaments&amp;p2=upc">upcoming</a><br />
+								<a href="/greifmasters/index.php?cat=list_tournaments&amp;p1=ong">ongoing</a><br />
+								<a href="/greifmasters/index.php?cat=list_tournaments&amp;p1=upc">upcoming</a><br />
 								<a href="/greifmasters/index.php?cat=list_tournaments">all</a><br />
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 						
 						<div class="navBox">
 							<div class="navHeading">Courts</div>
-							<a href="index.php?cat=courts&amp;p2=create">Create new court</a><br />
+							<a href="index.php?cat=courts&amp;p1=create">Create new court</a><br />
 							<a href="index.php?cat=courts">Show courts</a>
 						</div>
 						

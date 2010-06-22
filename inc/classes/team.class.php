@@ -13,26 +13,19 @@ class team extends db{
 	protected $created_by;
 	protected $logo;
 	
-	
-	
 	public function __construct(){
 		parent::__construct('teams');
 	}
-
-
 	
 	public function get_id(){
 		return $this->id;
 	}
-
 	
 	public function get_name(){
 		return $this->name;
 	}
 	
-	
 	public function get_name_by_id($id){
-		
 		$select = parent::select('name',"id='$id'");
 		return $select[0]['name'];
 		
@@ -46,9 +39,7 @@ class team extends db{
 		return $this->logo;
 	}
 	
-	
 	public function get_players(){
-		
 		$query = "
 			SELECT
 				p1.id AS player1_id,
@@ -66,23 +57,18 @@ class team extends db{
 		";
 		
 		$players = parent::fetch_results($query);
-		return $players[0];
-	
 		
+		return $players[0];
 	}
 	
 
 	public function store($team_name, $city, $player1, $player2, $player3, $logo='') {
-
-	
-		
 		$players = array();
 
-			foreach ( array($player1, $player2, $player3) as $name ) {
-				$player = new player();
-				
-				$player->store($name, '', '', '', '');
-				$players[] = $player->get_id();
+		foreach ( array($player1, $player2, $player3) as $name ) {
+			$player = new player();
+			$player->store($name, '', '', '', '');
+			$players[] = $player->get_id();
 		}
 		
 		parent::store(
@@ -95,19 +81,9 @@ class team extends db{
 				'$logo',
 				'".$_SESSION['user']."'"
 		);
-			
-
-		
-		
-		
-		
-	
 	}
 
-
-
 	public function load_entry($id) {
-
 		$query = "
 			SELECT
 
@@ -130,12 +106,13 @@ class team extends db{
 			AND p2.id != p3.id
 		";
 		
-		try {$result = parent::query ( $query );}
-		catch ( Exception $exception ) {
-				echo 'Error: ' . $exception->getMessage () . '<br />';
-				echo 'File: ' . $exception->getFile () . '<br />';
-				echo 'Line: ' . $exception->getLine () . '<br />';
-			}
+		try {
+			$result = parent::query ( $query );
+		} catch ( Exception $exception ) {
+			echo 'Error: ' . $exception->getMessage () . '<br />';
+			echo 'File: ' . $exception->getFile () . '<br />';
+			echo 'Line: ' . $exception->getLine () . '<br />';
+		}
 			
 		$data = $result->fetch_assoc();
 		
@@ -148,19 +125,11 @@ class team extends db{
 		$this->logo = $data ['logo'];
 		$this->created_by = $data['created_by'];
 		
-		
 		$result->close ();
-		
-		
-		
 	}
-	
-	
 	
 	public function set_players($player1, $player2, $player3){
 		parent::update('player1=`'.$player1.'`, player2=`'.$player2.'`, player3=`'.$player3.'`', 'id=`'.$this->id.'`');
 	}
-
 }
-
 ?>

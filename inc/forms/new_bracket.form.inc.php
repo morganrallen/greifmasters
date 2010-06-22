@@ -1,4 +1,4 @@
-<form action="<?php echo BASE?>/play_tournament/brackets/new/" method="post">
+<form action="index.php?cat=brackets&p1=new&p2=&p3=&p4=" method="post">
 <input type="hidden" name="submit" value="1" />
 <table>
 	<tr>

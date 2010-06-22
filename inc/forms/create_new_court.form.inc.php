@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo BASE ; ?>/courts/create">
+<form method="post" action="index.php?cat=courts&amp;p1=create">
 
 
 <input type="hidden" name="submit" value="1" />

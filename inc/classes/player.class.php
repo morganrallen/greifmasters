@@ -1,11 +1,7 @@
 <?php
-
-
 #FIXME: are players to be saved seperately from their team already, as the intended use of the system as platform would need it? one team would then belong to 3 players. or do players belong to their team? save surname and name seperately? 
 
-
-class player extends db{
-	
+class player extends db {
 	protected $id;
 	protected $lastname;
 	protected $surname;
@@ -13,12 +9,9 @@ class player extends db{
 	protected $tshirtsize;
 	protected $nick;
 
-
 	function __construct() {
 		parent::__construct('players');
 	}
-	
-	
 	
 	public function get_id(){
 		return $this->id;
@@ -42,35 +35,23 @@ class player extends db{
 	
 	#@todo: set methods
 	
-	
-	
 	public function set_name(){
-		
 	}
 	
 	public function set_surname(){
-		
 	}
 	
 	public function set_email(){
-		
 	}
 	
 	public function set_tshirtsize(){
-		
 	}
 	
 	public function set_nick(){
-		
 	}
 
-	
-	
 	public function store($name, $surname, $email, $tshirtsize, $nick){
-
-
 		parent::store('name, surname, email, tshirtsize, nick', "'$name', '$surname', '$email', '$tshirtsize', '$nick'");
-		
 	}
 }
 

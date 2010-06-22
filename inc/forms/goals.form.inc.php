@@ -1,6 +1,6 @@
 <table class="goals-form">
 	<tr>
-		<form method="post" action="<?php echo BASE; ?>/play_tournament/matches/ong/goal/store">
+		<form method="post" action="index.php?cat=play_tournament&p1=matches&p2=ong&p3=goal&p4=store">
 		<input type="hidden" name="team" value="<?php echo $team; ?>" />
 		<input type="hidden" name="player" value="<?php echo $players['player1_id']; ?>" />
 		
@@ -11,7 +11,7 @@
 		</form>
 	</tr>
 	<tr>
-		<form method="post" action="<?php echo BASE; ?>/play_tournament/matches/ong/goal/store">
+		<form method="post" action="index.php?cat=play_tournament&p1=matches&p2=ong&p3=goal&p4=store">
 		<input type="hidden" name="team" value="<?php echo $team; ?>" />
 		<input type="hidden" name="player" value="<?php echo $players['player2_id']; ?>" />
 		
@@ -22,7 +22,7 @@
 		</form>
 	</tr>
 	<tr>
-		<form method="post" action="<?php echo BASE; ?>/play_tournament/matches/ong/goal/store">
+		<form method="post" action="index.php?cat=play_tournament&p1=matches&p2=ong&p3=goal&p4=store">
 		<input type="hidden" name="team" value="<?php echo $team; ?>" />
 		<input type="hidden" name="player" value="<?php echo $players['player3_id']; ?>" />
 		

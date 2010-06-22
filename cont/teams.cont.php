@@ -30,25 +30,10 @@
 		return;
 	}
 	
-	
-	
-	
 	if( isset ($_GET ['p1']) && $_GET ['p1'] == 'create') {
-		
 		include 'cont/inc/create_team.cont.inc.php';
-		
 		return;
 	}
-	
-
-
-	// display info -------------------------------------------------------
-
-
 
 	include 'cont/inc/tables/existing_teams.table.inc.php';
-	
-	
-
-
 ?>

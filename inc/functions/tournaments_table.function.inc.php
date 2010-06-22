@@ -65,7 +65,7 @@ function tournaments_table($ong_upc='', $query_extension=''){
 
 	foreach ($tournaments as $row){
 
-		$edit = '/greifmasters/admin/tournament/'.$row ['id'];
+		$edit = '/greifmasters/index.php?cat=tournament&amp;p1='.$row ['id'];
 
 		$status = translate_status($row['status']);
 

@@ -7,38 +7,38 @@ switch ($tournament->get_status()) {
 		';
 
 		$registration = '
-			<a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/status/1">close registration</a>
+			<a href="/greifmasters/index.php?cat=tournament&amp;p1='.$tournament->get_id().'&amp;p2=1">close registration</a>
 		';
 	break;
 
 	case 1:
 		$startstop = '
-			<a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/status/2">start tournament</a>
+			<a href="/greifmasters/index.php?cat=tournament&amp;p1='.$tournament->get_id().'&amp;p2=2">start tournament</a>
 		';
 
 		$registration = '
-			<a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/status/0">re-open registration</a>
+			<a href="/greifmasters/index.php?cat=tournament&amp;p1='.$tournament->get_id().'&amp;p2=0">re-open registration</a>
 		';
 	break;
 
 
 	case 2:
 		$startstop = '
-			<a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/status/3">end tournament</a><br />
-			<a href="/greifmasters/admin/play_tournament/'.$tournament->get_id().'">PLAY THIS TOURNAMENT!!</a><br />
-			<a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/reset">reset tournament</a>
+			<a href="/greifmasters/index.php?cat=tournament&amp;p1='.$tournament->get_id().'&amp;p2=3">end tournament</a><br />
+			<a href="/greifmasters/index.php?cat=play_tournament&amp;p2='.$tournament->get_id().'">PLAY THIS TOURNAMENT!!</a><br />
+			<a href="/greifmasters/index.php?cat=tournament&amp;p2='.$tournament->get_id().'/reset">reset tournament</a>
 		';
 
-		$registration = '&nbsp;';
+		$registration = ' ';
 
 	break;
 
 	case 3:
 		$startstop = '
-			<a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/reset">reset tournament</a>
+			<a href="/greifmasters/index.php?cat=tournament&amp;p2='.$tournament->get_id().'/reset">reset tournament</a>
 		';
 
-		$registration = '&nbsp;';
+		$registration = ' ';
 
 
 	break;
@@ -53,11 +53,11 @@ echo "\n".'
 		</tr>
 		<tr>
 			<td>'.$startstop.'</td>
-			<td><a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/edit">edit tournament information</a></td>
+			<td><a href="/greifmasters/index.php?cat=tournament&amp;p2='.$tournament->get_id().'&amp;p3=edit">edit tournament information</a></td>
 		</tr>
 		<tr>
 			<td>'.$registration.'</td>
-			<td><a href="/greifmasters/admin/tournament/'.$tournament->get_id().'/massmail">send newsletter to teams</a></td>
+			<td><a href="/greifmasters/index.php?cat=tournament&amp;p2='.$tournament->get_id().'/massmail">send newsletter to teams</a></td>
 		</tr>
 	</table>
 '."\n";

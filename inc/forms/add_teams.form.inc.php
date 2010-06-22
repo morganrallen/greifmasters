@@ -8,7 +8,7 @@ if (isset($_POST['submit']) && $_POST['submit']==1){
 			$registration = new registration();
 
 				$registration->store($_POST['team_'.$i], $_SESSION['tournament_id'], $_SESSION['user']);
-				header ( "Location: ".BASE."/tournament/".$_SESSION['tournament_id']."/" );
+				header ( "Location: index.php?cat=tournament&p1=".$_SESSION['tournament_id'] );
 
 		}
 
@@ -18,7 +18,7 @@ if (isset($_POST['submit']) && $_POST['submit']==1){
 }else{
 
 echo '
-	<form method="post" action="'.BASE.'/tournament/'.$tournament_id.'/add_teams">
+	<form method="post" action="index.php?cat=tournament&p1='.$tournament_id."&p2=add_teams">
 	<input type="hidden" name="submit" value="1" />
 	';
 

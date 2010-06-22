@@ -17,7 +17,7 @@
 			try {
 				$new_team->save_team($_SESSION['user']);
 				$_SESSION['notification']=3;
-				header ( "Location: ../team/".$new_team->id );
+				header ( "Location: index.php?cat=team&p1=".$new_team->id );
 				# fixen!! relativ
 
 			}
